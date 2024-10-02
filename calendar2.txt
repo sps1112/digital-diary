@@ -1,0 +1,276 @@
+class calendar2
+{
+ void main(int y,int m,int d) 
+ {
+     int i,j,k,k2,p;
+     String s,s1;
+     s1="";
+     p=0;
+     j=1;
+     if(d%10==1)
+     {
+         s="st";
+         
+     }
+     else if(d%10==2)
+     {
+         s="nd";
+     }
+     else if(d%10==3)
+     {
+         s="rd";
+     }
+     else
+     {
+         s="th";
+     }
+     if(m==1)
+     {
+         System.out.println("                                           JANUARY           "+y);                                          
+     }
+     else if(m==2)
+     {
+         System.out.println("                                           FEBRUARY          "+y);                                          
+     }
+     else if(m==3)
+     {
+         System.out.println("                                           MARCH             "+y);                                       
+     }
+     else if(m==4)
+     {
+         System.out.println("                                           APRIL             "+y);                                      
+
+     }
+     else if(m==5)
+     {
+         System.out.println("                                           MAY               "+y);                                   
+     }
+     else if(m==6)
+     {
+         System.out.println("                                           JUNE              "+y);                                   
+     }
+     else if(m==7)
+     {
+         System.out.println("                                           JULY              "+y);                                  
+     }
+     else if(m==8)
+     {
+         System.out.println("                                           AUGUST            "+y);                                   
+     }
+     else if(m==9)
+     {
+         System.out.println("                                           SEPTEMBER         "+y);                                             
+     }
+     else if(m==10)
+     {
+         System.out.println("                                           OCTOBER           "+y);                                         
+     }
+     else if(m==11)
+     {
+         System.out.println("                                           NOVEMBER          "+y);                                         
+     }
+     else if(m==12)
+     {
+         System.out.println("                                            DECEMBER          "+y);                                          
+     }
+     for(i=1;i<y;i++)
+     {
+         if(i%4==0)
+         {
+             if(i%100==0)
+             {
+                 if(i%400==0)
+                 {
+                     j=j+2;
+                  }
+                  else
+                  {
+                      j++;
+                   }
+               }
+               else
+               {
+                   j=j+2;
+                }
+            }
+            else
+            {
+                j++;
+            }
+            if(j>=7)
+            {
+                j=j%7;
+            }
+        }
+        for(k=1;k<m;k++)
+        {
+             if(y%4==0)
+             {
+              if(y%100==0)
+              {
+                 if(y%400==0)
+                 {
+                     if(k==2)
+                     { 
+                     j=(j+29)%7;
+                     }
+                  }
+                  else
+                  {
+                      if(k==2)
+                      {
+                         j=(j+28)%7;
+                   }
+                }
+               }
+               else
+               {
+                   if(k==2)
+                   {
+                   j=(j+29)%7;
+                   }
+                }
+            }
+            else
+            {
+                if(k==2)
+                {
+                   j=(j+28)%7;
+                }
+            }
+            if(k==1 || k==3 || k==5 || k==7 || k==8 || k==10)
+            {
+                j=(j+31)%7;
+            }
+            if(k==4 || k==6 || k==9 || k==11)
+            {
+                j=(j+30)%7;
+            }
+        }
+        System.out.print("                                           Sun ");
+        System.out.print("Mon ");
+        System.out.print("Tue ");
+        System.out.print("Wed ");
+        System.out.print("Thur ");
+        System.out.print("Fri ");
+        System.out.print("Sat ");
+        System.out.println();
+        System.out.print("                                           ");
+        for(k2=0;k2<7;k2++)
+        {
+            if(k2==j)
+            {
+                p++;
+            if(k2==4)
+            {
+                    if(p<10)
+                {
+                    System.out.print(" 0"+p+"  ");
+                }
+                else
+                {
+                 System.out.print(" "+p+"  ");
+                }
+            }
+            else
+            {
+                if(p<10)
+                {
+                    System.out.print("0"+p+"  ");
+                }
+                else
+                {
+                 System.out.print(p+"  ");
+                }
+            }
+                j++;
+            }
+            else if(k2!=j)
+            {
+                System.out.print("    ");
+            }
+            if(j==7)
+            {
+                j=0;
+            }
+            if(y%4==0)
+             {
+              if(y%100==0)
+              {
+                 if(y%400==0)
+                 {
+                     if(m==2)
+                     {
+                         if(p==29)
+                         {
+                             System.out.println();
+                             System.out.println("The Date Is "+d+s);
+                             break;
+                          }
+                     }
+                  }
+                  else
+                  {
+                      if(m==2)
+                      {
+                        if(p==28)
+                        {
+                            System.out.println();
+                            System.out.println("The Date Is "+d+s);
+                            break;
+                        }
+                   }
+                }
+               }
+               else
+               {
+                   if(m==2)
+                   {
+                       if(p==29)
+                       {
+                           System.out.println();
+                           System.out.println("The Date Is "+d+s);
+                           break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+             if(m==2)
+             {
+                 if(p==28)
+                 {
+                     System.out.println();
+                     System.out.println("The Date Is "+d+s);
+                     break;
+                  }
+                }
+            }
+            if(m==1 || m==3 || m==5 || m==7 || m==8 || m==10 || m==12)
+            {
+                if(p==31)
+                {
+                    System.out.println();
+                    System.out.println("The Date Is "+d+s);
+                    break;
+                    }
+                }
+            if(m==4 || m==6 || m==9 || m==11)
+                {
+                    if(p==30)
+                    { 
+                        System.out.println();
+                        System.out.println("The Date Is "+d+s);
+                        break;
+                    }
+                }
+            if(k2==6)
+                {
+                k2=-1;
+                System.out.println();
+                System.out.print("                                           ");
+             }
+            }
+        }
+    }

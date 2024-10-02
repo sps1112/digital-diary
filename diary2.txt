@@ -1,0 +1,475 @@
+import java.io.*;
+
+class diary2
+{
+ int n;
+ String s;
+ diary2 next;
+ diary2 next2;
+ diary2 next3;
+ diary2 next4;
+ void main() throws IOException
+ {
+     BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+     int i,y,m,d,ch,ch2,ch3;
+     String me;
+     diary2 ob=new diary2();
+     ob.s="";
+     diary2 ob1=new diary2();
+     i=1;
+     System.out.println("***            *******              * * *       *******      **********           *             *       ");
+     System.out.println("*    *            *              *                  *            *               * *            *       ");
+     System.out.println("*      *          *            *                    *            *              *   *           *       ");
+     System.out.println("*       *         *           *                     *            *             *     *          *       ");
+     System.out.println("*      *          *          *      *****           *            *            *********         *       ");
+     System.out.println("*     *           *            *    *   *           *            *           *         *        *       ");
+     System.out.println("*    *            *              *  *   *           *            *          *           *       *       ");
+     System.out.println("***            *******             **   *        ******          *         *             *      ********");
+     System.out.println();
+     System.out.println();
+     System.out.println("***       *******          *           * *       *     *");
+     System.out.println("*   *         *            * *         *   *      *   * ");
+     System.out.println("*   *         *           *   *        ** *        * *  ");
+     System.out.println("*   *         *          *******       * *          *   ");
+     System.out.println("*  *          *         *       *      *   *        *   ");
+     System.out.println("***        *******     *         *     *     *      *   ");
+     System.out.println();
+     System.out.println();
+     System.out.println("***    ***     ****    *****   ****   *   *   *****   ****   **         ***    *   *");
+     System.out.println("*  *   *  *    *       *       *      **  *     *     *      * *        *  *    * *");
+     System.out.println("***    ***     ****    *****   ****   * * *     *     ****   *  *       ***      *");
+     System.out.println("*      *  *    *           *   *      *  **     *     *      * *        *  *     *");
+     System.out.println("*      *   *   ****    *****   ****   *   *     *     ****   **         ***      *");
+     System.out.println();
+     System.out.println();
+     System.out.println("**   **     *        **   **      ****   *   *     ***     *       *****   *****   *   *       **     **     *       *       *****     ***     *****");
+     System.out.println("* * * *     *        * * * *      *      **  *    *        *         *     *       *   *      *      *  *    *       *       *        *        *    ");
+     System.out.println("*  *  *     *        *  *  *      ****   * * *   *   ***   *         *     *****   *****     *      *    *   *       *       *****   *   ***   *****");
+     System.out.println("*     *     *        *     *      *      *  **    *  * *   *         *         *   *   *      *      *  *    *       *       *        *  * *   *    ");
+     System.out.println("*     *     ******   *     *      ****   *   *     *** *   *****   *****   *****   *   *       **     **     *****   *****   *****     *** *   *****");
+     System.out.println();
+     System.out.println();
+     System.out.println("Input 1 To Enter A Date Or Input Any Other Integer To End");
+     ch=Integer.parseInt(br.readLine());
+     if(ch==1)
+     {
+         while(ch==1)
+         {
+            ch2=0;
+            ch3=0;
+            if(i!=1)
+            {
+              System.out.print('\u000c');
+              System.out.println("***            *******              * * *       *******      **********           *             *       ");
+              System.out.println("*    *            *              *                  *            *               * *            *       ");
+              System.out.println("*      *          *            *                    *            *              *   *           *       ");
+              System.out.println("*       *         *           *                     *            *             *     *          *       ");
+              System.out.println("*      *          *          *      *****           *            *            *********         *       ");
+              System.out.println("*     *           *            *    *   *           *            *           *         *        *       ");
+              System.out.println("*    *            *              *  *   *           *            *          *           *       *       ");
+              System.out.println("***            *******             **   *        ******          *         *             *      ********");
+              System.out.println();
+              System.out.println("***       *******           *          * *       *     *");
+              System.out.println("*   *         *            * *         *   *      *   * ");
+              System.out.println("*   *         *           *   *        ** *        * *  ");
+              System.out.println("*   *         *          *******       * *          *   ");
+              System.out.println("*  *          *         *       *      *   *        *   ");
+              System.out.println("***        *******     *         *     *     *      *   ");
+              System.out.println();
+              System.out.println();
+              System.out.println("***    ***     ****    *****   ****   *   *   *****   ****   **         ***    *   *");
+              System.out.println("*  *   *  *    *       *       *      **  *     *     *      * *        *  *    * *");
+              System.out.println("***    ***     ****    *****   ****   * * *     *     ****   *  *       ***      *");
+              System.out.println("*      *  *    *           *   *      *  **     *     *      * *        *  *     *");
+              System.out.println("*      *   *   ****    *****   ****   *   *     *     ****   **         ***      *");
+              System.out.println();
+              System.out.println();
+              System.out.println("**   **     *        **   **      ****   *   *     ***     *       *****   *****   *   *       **     **     *       *       *****     ***     *****");
+              System.out.println("* * * *     *        * * * *      *      **  *    *        *         *     *       *   *      *      *  *    *       *       *        *        *    ");
+              System.out.println("*  *  *     *        *  *  *      ****   * * *   *   ***   *         *     *****   *****     *      *    *   *       *       *****   *   ***   *****");
+              System.out.println("*     *     *        *     *      *      *  **    *  * *   *         *         *   *   *      *      *  *    *       *       *        *  * *   *    ");
+              System.out.println("*     *     ******   *     *      ****   *   *     *** *   *****   *****   *****   *   *       **     **     *****   *****   *****     *** *   *****");
+              System.out.println();
+              System.out.println();
+            }
+             System.out.println("Enter Year");
+             y=Integer.parseInt(br.readLine());
+             System.out.println("Enter Month");
+             m=Integer.parseInt(br.readLine());
+             if(i==1)
+             {
+                 ob1=ob;
+                 ob1.n=y;
+                 diary2 ob3=new diary2();
+                 ob3.n=m;
+                 ob1.next2=ob3;
+              }
+              else
+              {
+                  ob1=ob;
+                  while(ob1!=null)
+                  {
+                      if(ob1.n==y)
+                      {
+                          diary2 ob3=new diary2();
+                          ob3=ob1.next2;
+                          while(ob3!=null)
+                          {
+                              if(ob3.n==m)
+                              {
+                                  break;
+                               }
+                               else if(ob3.next2==null)
+                              {
+                                diary2 ob4=new diary2();        
+                                ob3.next2=ob4;
+                                ob4.n=m;
+                                ob4.s="";
+                                break;
+                             }
+                            ob3=ob3.next2;
+                        }
+                        break;
+                    }
+                    else if(ob1.next==null)
+                    {
+                        diary2 ob3=new diary2();
+                        ob1.next=ob3;
+                        ob3.n=y;
+                        ob3.s="";
+                        diary2 ob4=new diary2();
+                        ob3.next2=ob4;
+                        ob4.n=m;
+                        ob4.s="";
+                        break;
+                    }
+                    ob1=ob1.next;
+                }
+            }
+            System.out.println("Enter Date");
+            d=Integer.parseInt(br.readLine());
+            while(ch==1)
+            {
+                    if(ch2==1)
+                    {
+                      System.out.println("Enter Date");
+                      d=Integer.parseInt(br.readLine());
+                    }
+                    if(m==1 || m==3 || m==5 || m== 7 || m==8 || m==10 || m==12)
+                    {
+                        if(d>0 && d<=31)
+                        {
+                            System.out.println("The Date Is Valid");
+                            break;
+                        }
+                        else
+                        {
+                            System.out.println("The Date Is Invalid.");
+                            System.out.println("Enter Again");
+                            ch2=1;
+                            continue;
+                        }
+                    }
+                    else if(m==4 || m==6 || m==9 || m==11)
+                    {
+                         if(d>0 && d<=30)
+                        {
+                            System.out.println("The Date Is Valid");
+                            break;
+                        }
+                        else
+                        {
+                            System.out.println("The Date Is Invalid.");
+                            System.out.println("Enter Again");
+                            ch2=1;
+                            continue;
+                        }
+                    }
+                    else if(m==2)
+                    {
+                        if(y%4==0)
+                        {
+                            if(y%100==0)
+                            {
+                               if(y%400==0)
+                               {
+                                    if(d>0 && d<=29)
+                                   {
+                                     System.out.println("The Date Is Valid");
+                                     break;
+                                   }
+                                   else
+                                   {
+                                    System.out.println("The Date Is Invalid.");
+                                    System.out.println("Enter Again");
+                                    ch2 =1;
+                                    continue;
+                                   }
+                                }
+                                else
+                                {
+                                     if(d>0 && d<=28)
+                                     {
+                                       System.out.println("The Date Is Valid");
+                                        break;
+                                     }
+                                     else
+                                     {
+                                       System.out.println("The Date Is Invalid.");
+                                       System.out.println("Enter Again");
+                                       ch2=1;
+                                       continue;
+                                      }
+                                  }
+                                }
+                                else
+                                {
+                                     if(d>0 && d<=29)
+                                     {
+                                       System.out.println("The Date Is Valid");
+                                       break;
+                                      }
+                                     else
+                                     {
+                                      System.out.println("The Date Is Invalid.");
+                                      System.out.println("Enter Again");
+                                      ch2=1;
+                                      continue;
+                                     }
+                                   }
+                                }
+                                else
+                                {
+                                     if(d>0 && d<=28)
+                                    {
+                                     System.out.println("The Date Is Valid");
+                                      break;
+                                     }
+                                     else
+                                     {
+                                      System.out.println("The Date Is Invalid.");
+                                      System.out.println("Enter Again");
+                                      ch2=1;
+                                      continue;
+                                     }
+                                   }
+                     }
+            }
+            if(i==1)
+            {
+             ob1=ob;
+             diary2 ob5=new diary2();
+             ob1=ob1.next2;
+             ob1.next3=ob5;
+             ob5.n=d;
+            }
+            else
+            {
+             ob1=ob;
+             while(ob1!=null)
+             {
+               if(ob1.n==y)
+               {
+                 diary2 ob3=new diary2();
+                 ob3=ob1.next2;
+                 while(ob3!=null)
+                 {
+                    if(ob3.n==m)
+                    {
+                       diary2 ob4=new diary2();
+                       if(ob3.next3==null)
+                       {
+                          ob4.n=d;
+                          ob4.s="";
+                          ob3.next3=ob4;
+                       }
+                       else
+                       {
+                          ob4=ob3.next3;
+                          while(ob4!=null)
+                          {
+                              if(ob4.n==d)
+                              {
+                                 break;
+                              }
+                              else if(ob4.next3==null)
+                              {
+                                 diary2 ob5=new diary2();
+                                 ob4.next3=ob5;
+                                 ob5.n=d;
+                                 ob5.s="";
+                                 break;
+                               }
+                              ob4=ob4.next3;
+                          }
+                        }
+                    }
+                    ob3=ob3.next2;
+                  }
+               }
+               ob1=ob1.next;
+             }
+            }
+            calendar2 ob2=new calendar2();
+            ob2.main(y,m,d);
+            System.out.println();
+            ob1=ob;
+            while(ob1!=null)
+            {
+               if(ob1.n==y)
+               {
+                   if(ob1.s!="")
+                   {
+                       diary2 ob3=new diary2();
+                       ob3=ob1.next2;
+                       while(ob3!=null)
+                       {
+                           if(ob3.n==m)
+                           {
+                               if(ob3.s!="")
+                               {
+                                  diary2 ob4=new diary2();
+                                  ob4=ob3.next3;
+                                  while(ob4!=null)
+                                  {
+                                     if(ob4.n==d)
+                                     {
+                                         if(ob4.s!="")
+                                         {
+                                             System.out.println("The Messages That are Stored In This Date Are");
+                                             diary2 ob5=new diary2();
+                                             ob5=ob4.next4;
+                                             while(ob5!=null)
+                                             {
+                                                System.out.println(ob5.s);
+                                                ob5=ob5.next4;
+                                             }
+                                         }
+                                         else
+                                         {
+                                            System.out.println("No Messages Are Stored In This Date");
+                                            break;
+                                         }
+                                     }
+                                     ob4=ob4.next3;
+                                   }
+                                }
+                               else
+                               {
+                                  System.out.println("No Messages Are Stored In This Date");
+                                  break;
+                               }
+                            }
+                           ob3=ob3.next2;
+                        }
+                    }
+                    else
+                    {
+                       System.out.println("No Messages Are Stored In This Date");
+                       break;
+                    }
+                }
+               ob1=ob1.next;
+             }
+            System.out.println("Input 1 To Enter A New Message To This Inputed Date Or Input Any Other Integer To Continue");
+            ch=Integer.parseInt(br.readLine());
+            if(ch==1)
+            {
+               System.out.println("Enter The Message");
+               me=br.readLine();
+               ob1=ob;
+               while(ob1!=null)
+               {
+                  if(ob1.n==y)
+                  {
+                     ob1.s=me;
+                     diary2 ob3=new diary2();
+                     ob3=ob1.next2;
+                     while(ob3!=null)
+                     {
+                        if(ob3.n==m)
+                        {
+                            ob3.s=me;
+                            diary2 ob4=new diary2();
+                            ob4=ob3.next3;
+                            while(ob4!=null)
+                            {
+                                if(ob4.n==d)
+                                {
+                                   ob4.s=me;
+                                   if(ob4.next4==null)
+                                   {
+                                       diary2 ob5=new diary2();
+                                       ob4.next4=ob5;
+                                       ob5.s=me;
+                                       System.out.println("The Message Is Stored");
+                                       break;
+                                   }
+                                   else
+                                   {
+                                       diary2 ob5=new diary2();
+                                       ob5=ob4.next4;
+                                       while(ob5!=null)
+                                       {
+                                           if(ob5.s==me)
+                                           { 
+                                             System.out.println("This Message Is Already Stored In This Date.Input 1 To Enter Some Other Message Or Input Any Other Integer To Continue");
+                                             ch=Integer.parseInt(br.readLine());
+                                             if(ch==1)
+                                             {
+                                                 ch3=1;
+                                             }
+                                             else
+                                             {
+                                                 ch3=0;
+                                                 break;
+                                              }
+                                           }
+                                            else if(ob5.next4==null)
+                                            {
+                                               diary2 ob6=new diary2();
+                                               ob5.next4=ob6;
+                                               ob6.s=me;
+                                               System.out.println("The Message Is Stored");
+                                               break;
+                                            }
+                                            ob5=ob5.next4;
+                                      }
+                                    }
+                                 }
+                                 ob4=ob4.next3;
+                             }
+                        }
+                        ob3=ob3.next2;
+                     }
+                  }
+                  ob1=ob1.next;
+                  if(ch3==1)
+                  {
+                      System.out.println("Enter The Message");
+                      me=br.readLine();
+                      ch3=0;
+                      continue;
+                  }
+                }
+            }
+               System.out.println("Input 1 To Enter A New Date Or Input Any Other Integer To End");
+               ch=Integer.parseInt(br.readLine());
+               if(ch==1)
+               {
+                  i++;
+                  continue;
+               }
+               else
+               {
+                  System.out.println("Program Terminated");
+                  break;
+               }
+             }
+    }
+    else
+    {
+      System.out.println("Program Terminated");
+    }
+ }
+}
